@@ -73,5 +73,43 @@ main {
     }
   }
 }
-
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3 ";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.4rem;
+    border-bottom: solid 5px $secondary-color;
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+}
+#main-footer {
+  height: 60px;
+  background: darken($primary-color, $amount: 5);
+  padding: 1rem;
+  text-align: center;
+  color: set-text-color($primary-color);
+}
 @import "mobile";
